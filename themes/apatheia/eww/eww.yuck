@@ -630,4 +630,5 @@
     (label :text "DAYS")
     (label :text ddl_weeks)
     (label :text "WEEKS")
+    (label :text "left for")
     (label :text ddl_event)))
