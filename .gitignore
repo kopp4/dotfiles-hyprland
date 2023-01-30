@@ -1,7 +1,6 @@
 # ignore user specific 
 hyprland.conf
 themes/apatheia/scripts/swaypaper
-hyprland.conf
 scripts/variables/temp/primary_screen
 store/latest_notif
 scripts/variables/temp/background
@@ -11,3 +10,5 @@ themes/detox
 *.gif
 /themes/apatheia/wallpapers
 scripts/variables/temp/*
+scripts/extra/word_collect
+scripts/extra/word.collect
