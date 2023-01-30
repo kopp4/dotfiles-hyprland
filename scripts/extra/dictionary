@@ -3,3 +3,4 @@
 input="$(wofi --show dmenu)"
 # dict $input | wofi --show dmenu --width 1000 --heigh 500
 trans :zh-CN -d $input | wofi --show dmenu --width 1000 --heigh 500
+echo $input >> ~/.config/hypr/scripts/extra/word_collect
