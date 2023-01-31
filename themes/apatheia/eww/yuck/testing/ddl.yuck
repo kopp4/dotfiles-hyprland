@@ -15,11 +15,14 @@
   ;             :width "10%"
   ;             :height "1%")
   (box
-    ; :orientation "h"
     :class "ddl_kanban"
+    :orientation "h"
+    :space-evenly "false"
     (label :text ddl_days)
-    (label :text "DAYS")
+    (label :text " DAYS ")
     (label :text ddl_weeks)
-    (label :text "WEEKS")
-    (label :text "left for")
-    (label :text ddl_event)))
+    (label :text " WEEKS ")
+    (label :text " left for ")
+    (label
+      :class "ddl_event"
+      :text ddl_event)))
