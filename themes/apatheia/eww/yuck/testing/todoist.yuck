@@ -1,8 +1,7 @@
 ;; This scipt is configured for wayland
 (defpoll todos 
   :interval "10s"
-  :initial "todoist-cli sync"
-  `todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f6-`)
+  `todoist-cli sync;todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f6-`)
 (defpoll time 
   :interval "5s"
   :initial `date +'{"hour":"%H","min":"%M"}'`

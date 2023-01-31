@@ -8,6 +8,8 @@
 (include "yuck/sidebar/sidebar.yuck")
 ;; todo include testing
 (include "yuck/testing/todoist.yuck")
+(include "yuck/testing/ddl.yuck")
+
 
 ;; Variables
 (defpoll clock_time :interval "5s" "date '+\%H\%M'")
@@ -15,11 +17,6 @@
 (defpoll calendar_day :interval "2h" "date '+%d'")
 (defpoll calendar_year :interval "2h" "date '+%Y'")
 (defpoll volume_percent :interval "1s"  "scripts/sbvol --get")
-;; todo incluing ddl py script
-(defpoll ddl_days :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==1'")
-(defpoll ddl_weeks :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==2'")
-; (defpoll ddl_weeks :interval "2h" "ddl_days + 1")
-(defpoll ddl_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==3'")
 
 
 
@@ -53,7 +50,7 @@
       :onclick "~/.config/hypr/scripts/exec_wofi application_launcher"
       (image
         :class "launcher-icon"
-        :path "assets/blossom.png"
+        :path "assets/3d.gif"
        :image-width 28))))
   
 
@@ -255,7 +252,8 @@
     :class "left_modules"
     (launcher)
     (sep)
-    (workspaces)))
+    (workspaces)
+    (ddl)))
 (defwidget center []
   (box
     :orientation "h"
@@ -295,7 +293,7 @@
   :exclusive false
   :geometry (geometry
              :width "58%"
-             :height "50px"
+             :height "5%"
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
@@ -613,22 +611,3 @@
   (cal))
 
 
-(defwindow ddl
-  :stacking "bg"
-  :monitor 0
-  :focusable false
-  :anchor "bottom right"
-  :geometry (geometry
-              :x "2%"
-              :y "2%"
-              :width "10%"
-              :height "1%")
-  (box
-    ; :orientation "h"
-    :class "ddl_kanban"
-    (label :text ddl_days)
-    (label :text "DAYS")
-    (label :text ddl_weeks)
-    (label :text "WEEKS")
-    (label :text "left for")
-    (label :text ddl_event)))
