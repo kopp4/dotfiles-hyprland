@@ -1,0 +1,20 @@
+(defwidget l_corner []
+  (box
+    :class "left_corner_class"
+    :orientation "h"
+    (label 
+      :text "dsafasdf")
+    (shuf_buttons)))
+(defwidget shuf_buttons []
+  (box
+    :class "button_box" :spacing 5
+    :vexpand true 
+    :hexpand true
+    :space-evenly false
+    (button
+      :onclick "scripts/wallpaper_shuffle"
+      (image
+        :class "button_img_class"
+        :path "assets/camera_ztmy.png"
+        :image-width 28))))
+

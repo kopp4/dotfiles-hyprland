@@ -9,6 +9,7 @@
 ;; todo include testing
 (include "yuck/testing/todoist.yuck")
 (include "yuck/testing/ddl.yuck")
+(include "yuck/testing/wp_shuf.yuck")
 
 
 ;; Variables
@@ -17,6 +18,8 @@
 (defpoll calendar_day :interval "2h" "date '+%d'")
 (defpoll calendar_year :interval "2h" "date '+%Y'")
 (defpoll volume_percent :interval "1s"  "scripts/sbvol --get")
+;; todo include testing
+(defpoll wp_shuf_script :interval "2h" "scripts/wallpaper_shuffle | awk NR==1")
 
 
 
@@ -47,7 +50,8 @@
     :class "launcher_module"
     :orientation "h"
     (button
-      :onclick "~/.config/hypr/scripts/exec_wofi application_launcher"
+      ; :onclick "~/.config/hypr/scripts/exec_wofi application_launcher"
+      :onclick "scripts/wallpaper_shuffle"
       (image
         :class "launcher-icon"
         :path "assets/3d.gif"
@@ -253,7 +257,8 @@
     (launcher)
     (sep)
     (workspaces)
-    (ddl)))
+    (ddl)
+    (l_corner)))
 (defwidget center []
   (box
     :orientation "h"
@@ -285,6 +290,7 @@
     (left)
     (center)
     (right)))
+    
   
 
 ;; bars for your 3 screens (one for each)
