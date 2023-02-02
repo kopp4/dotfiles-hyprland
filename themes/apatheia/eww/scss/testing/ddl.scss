@@ -1,13 +1,22 @@
-.ddl_kanban {
-    background-color: $background-bar;
-    border-radius: 12px;
-    margin: 10px 15px 15px 15px;
-    padding: 4px;
-    box-shadow: 0 6px 5px 2px $shadow;
-    font-family: FantasqueSansMono Nerd Font;
+.ddl_days {
+    color: $red;
+    font-size: 20;
     font-weight: bold;
 }
+
+.ddl_weeks {
+    color: $green;
+    font-size: 20;
+    font-weight: bold;
+}
+
+.ddl_left {
+    color: $yellow;
+    font-size: 20;
+}
+
 .ddl_event {
+    text-decoration: underline;
     color: $purple2;
     font-size: 20;
     font-weight: bold;

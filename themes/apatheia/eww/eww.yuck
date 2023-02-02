@@ -67,7 +67,6 @@
     (box
       :orientation "h"
       :space-evenly "false"
-      :valign "end"
       :vexpand "false"
       :hexpand "false"
       (literal
