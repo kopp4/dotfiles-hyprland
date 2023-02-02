@@ -20,7 +20,8 @@
 
 
 - [ ] Abstract ddl widget so that it could be easily reused
-- [ ] Onhover ddl widget reveal children ?
+- [ ] Onhover ddl widget reveal children ? 
+- [ ] Onhover ddl widget animation may be a glitch or flame I don't care it's future me doin it :p same goes to todos btw
 - [ ] Todoist widget pending location bar or desktop
 - [ ] Onhover todoist widget reveal children ?
 
