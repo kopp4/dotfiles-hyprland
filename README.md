@@ -20,10 +20,11 @@
 - [ ] Dict transfer to anki script
 - [ ] A better dictionary source
 - [ ] A better bar maybe 
+>   reference : https://github.com/flick0/dotfiles/tree/aurora
+- [ ] Swww bug :( not again
 
 
 - [ ] shuffle background btn
->   reference : https://github.com/flick0/dotfiles/tree/aurora
 - [ ] Format todos widget
 
 # 🔨 AmadeusWM dude's TO-DO

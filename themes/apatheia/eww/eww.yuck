@@ -9,7 +9,6 @@
 ;; todo include testing
 (include "yuck/testing/todoist.yuck")
 (include "yuck/testing/ddl.yuck")
-(include "yuck/testing/wp_shuf.yuck")
 
 
 ;; Variables
@@ -18,8 +17,6 @@
 (defpoll calendar_day :interval "2h" "date '+%d'")
 (defpoll calendar_year :interval "2h" "date '+%Y'")
 (defpoll volume_percent :interval "1s"  "scripts/sbvol --get")
-;; todo include testing
-(defpoll wp_shuf_script :interval "2h" "scripts/wallpaper_shuffle | awk NR==1")
 
 
 
@@ -257,8 +254,7 @@
     (launcher)
     (sep)
     (workspaces)
-    (ddl)
-    (l_corner)))
+    (ddl)))
 (defwidget center []
   (box
     :orientation "h"
