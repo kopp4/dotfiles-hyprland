@@ -67,6 +67,7 @@
     (box
       :orientation "h"
       :space-evenly "false"
+      :valign "end"
       :vexpand "false"
       :hexpand "false"
       (literal
@@ -253,8 +254,7 @@
     :class "left_modules"
     (launcher)
     (sep)
-    (workspaces)
-    (ddl)))
+    (workspaces)))
 (defwidget center []
   (box
     :orientation "h"
@@ -288,6 +288,15 @@
     (right)))
     
   
+(defwidget root_bar_layout []
+  (centerbox
+    :class "root_bar_class"
+    :orientation "h"
+    (ddl)
+    (bar_layout)
+    (todowidget)))
+
+
 
 ;; bars for your 3 screens (one for each)
 (defwindow bar0
@@ -299,7 +308,7 @@
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (bar_layout))
+  (root_bar_layout))
 (defwindow bar1
   :monitor 1
   :exclusive false
@@ -309,7 +318,7 @@
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (bar_layout))
+  (root_bar_layout))
 (defwindow bar2
   :monitor 2
   :exclusive false
@@ -319,7 +328,7 @@
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (bar_layout))
+  (root_bar_layout))
 
 (defwidget audio []
   (box

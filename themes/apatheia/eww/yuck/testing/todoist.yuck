@@ -1,7 +1,7 @@
 ;; This scipt is configured for wayland
 (defpoll todos 
   :interval "10s"
-  `todoist-cli sync;todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f6-`)
+  `todoist-cli sync;todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7-`)
 (defpoll time 
   :interval "5s"
   :initial `date +'{"hour":"%H","min":"%M"}'`
@@ -11,19 +11,45 @@
   :initial `N/A`
   `nmcli -t -f SIGNAL,ACTIVE device wifi \
     | awk -F':' '{if($2=="yes")print$1}'`)
-(defwindow todowindow
-  :monitor 0
-  :stacking "bg"
-  :anchor "bottom right"
-  :geometry (geometry
-              :width "20%"
-              :height "10%"
-              :x "79%"
-              :y "1%")
-  :focusable false
-  :exclusive false
-  (label
-    :text todos))
+(defwidget todowidget []
+  ; :monitor 0
+  ; :stacking "bg"
+  ; :anchor "bottom right"
+  ; :geometry (geometry
+  ;             :width "20%"
+  ;             :height "10%"
+  ;             :x "79%"
+  ;             :y "0%")
+  ; :focusable false
+  ; :exclusive false
+  ; combo-box-text ? 
+  ; A combo box allowing the user to choose between several items.
+  (box
+    :class "todowidget_revealer_class"
+    :orientation "h"
+    ; :active true
+    (revealer
+      :transition "slidedown"
+    (label
+      :text "${ todos }"
+      :limit-width 20))))
+
+; expander revealer 
+; checkbox scale(slider) scroll(single child that can scroll)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (defwindow testing
   :monitor 0
   :stacking "fg"

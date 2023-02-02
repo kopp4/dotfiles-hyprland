@@ -13,15 +13,16 @@
 - [ ] Clipboard select and enter directly paste
 - [ ] Swww script : see swww_init_according_to_time_of_day.sh
 > https://github.com/Horus645/swww/blob/main/example_scripts/swww_init_according_to_time_of_day.sh
-- [ ] Swww if not display : swaybg else fix it :p
+- [x] Swww if not display : swaybg else fix it :p
 - [ ] Youtube scrapper to random list of video wallpaper on start : NO
-- [ ] Kitty can't kill dingtalk wtf no
+- [x] Kitty can't kill dingtalk wtf no
 - [ ] Kitty can't kitten tmux alternative
 - [ ] Dict transfer to anki script
 - [ ] A better dictionary source
 - [ ] A better bar maybe 
 >   reference : https://github.com/flick0/dotfiles/tree/aurora
 - [ ] Swww bug :( not again
+- [ ] Todoist bar 
 
 
 - [ ] shuffle background btn
