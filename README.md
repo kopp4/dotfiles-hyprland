@@ -6,6 +6,7 @@
 # 🔨 TO-DO
 - [x] TODO a desktop widget integrate todoist CLI template
 >   reference : https://github.com/joshpetit/dotfiles
+- [x] Networkmanager-dmenu
 - [ ] Fix colorpick win+c keybinds
 - [ ] Clipboard select and enter directly paste
 - [ ] Swww script : see swww_init_according_to_time_of_day.sh
@@ -24,6 +25,11 @@
 - [ ] Onhover ddl widget animation may be a glitch or flame I don't care it's future me doin it :p same goes to todos btw
 - [ ] Todoist widget pending location bar or desktop
 - [ ] Onhover todoist widget reveal children ?
+- [ ] Network widget strength
+- [ ] weather script integrate
+- [ ] eww primary screen shi, window opened onclick went to monitor 1 wtf
+- [ ] 
+
 
 
 

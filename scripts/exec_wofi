@@ -6,7 +6,8 @@ function app_launcher(){
 
 
 function wifi_menu(){
-    NetworkManager&
+    networkmanager_dmenu
+    # with wofi -d config (dmenu)
 }
 
 doc() {

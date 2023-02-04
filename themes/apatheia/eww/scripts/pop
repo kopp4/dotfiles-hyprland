@@ -2,6 +2,7 @@
 EWW_BIN="/usr/bin/eww -c $HOME/.config/hypr/themes/apatheia/eww"
 
 # select widget for focused monitor
+# This command don't work while only with 1 external monitor on
 focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
 # console parameter + display id 
 WIDGET="$1${focusmon}"
