@@ -28,7 +28,11 @@
 - [ ] Network widget strength
 - [ ] weather script integrate
 - [ ] eww primary screen shi, window opened onclick went to monitor 1 wtf
-- [ ] 
+- [ ] spotify eww or anything frontend top right corner floating
+> reference https://github.com/niraj998/niraj998 or syndrizzle dude
+- [ ] workspace from this dude
+> reference https://github.com/saimoomedits/eww-widgets
+- [ ] mpd & ncmpcpp configure
 
 
 
