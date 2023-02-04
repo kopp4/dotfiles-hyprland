@@ -3,8 +3,12 @@
 #define icons for workspaces 1-9
 # ic=(0     輸  " " " " )
 # ic=(0 1 2 3 4 5 6 7 8 9)
-ic=(0 一 二 三 四 五 六 七 八 九 〇)
-
+# ic=(0 'ア)' 'イ)' 'ウ)' 'エ)' 'オ)' 'カ)' 'キ)' 'ク)' 'ケ)' 'コ)')
+ic=(0 ア イ ウ エ オ カ キ ク ケ コ)
+# ic=(0 一 二 三 四 五 六 七 八 九 零) 
+# ic=(0 〇 〇 〇 〇 〇 〇 〇 〇 〇 〇)
+# ic=(          )
+# ic=(0 '|' 綺 羅 綺 羅 羅 鬼 羅 鬼 '|')
 #initial check for occupied workspaces
 for num in $(hyprctl workspaces | grep ID | awk '{print $3}'); do 
   export o"$num"="$num"

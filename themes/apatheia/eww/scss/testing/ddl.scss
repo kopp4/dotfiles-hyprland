@@ -1,3 +1,10 @@
+.ddl {
+    background-color: $background-bar;
+    border-radius: 12px;
+    margin: 10px 15px 15px 15px;
+    padding: 4px;
+    box-shadow: 0 6px 5px 2px $shadow;
+}
 .ddl_days {
     color: $red;
     font-size: 20;

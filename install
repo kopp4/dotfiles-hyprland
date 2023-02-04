@@ -4,6 +4,7 @@ ln -sf ${PWD}/dots/dunst ~/.config
 ln -sf ${PWD}/dots/wofi ~/.config
 ln -sf ${PWD}/dots/rofi ~/.config
 ln -sf ${PWD}/dots/kitty ~/.config
+ln -sf ${pwd}/config.ini ~/.config/networkmanager-dmenu/
 # spotify theme
 mkdir -p "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish" && mkdir -p ../../Extensions

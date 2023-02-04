@@ -251,8 +251,6 @@
     :space-evenly false
     :halign "start"
     :class "left_modules"
-    (launcher)
-    (sep)
     (workspaces)))
 (defwidget center []
   (box
@@ -287,13 +285,14 @@
     (right)))
     
   
-(defwidget root_bar_layout []
-  (centerbox
-    :class "root_bar_class"
-    :orientation "h"
-    (ddl)
-    (bar_layout)
-    (todowidget)))
+; nope my todos sidedown disgustingly together with my whole bar eww :(
+; (defwidget root_bar_layout []
+;   (centerbox
+;     :class "root_bar_class"
+;     :orientation "h"
+;     (ddl)
+;     (bar_layout)
+;     (todowidget)))
 
 
 
@@ -307,7 +306,7 @@
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (root_bar_layout))
+  (bar_layout))
 (defwindow bar1
   :monitor 1
   :exclusive false
@@ -317,7 +316,7 @@
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (root_bar_layout))
+  (bar_layout))
 (defwindow bar2
   :monitor 2
   :exclusive false
@@ -327,7 +326,7 @@
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (root_bar_layout))
+  (bar_layout))
 
 (defwidget audio []
   (box

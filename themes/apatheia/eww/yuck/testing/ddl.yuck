@@ -7,18 +7,11 @@
 ; todo maybe I would create a revealer for ddl so that it could be multiple
 
 (defwidget ddl []
-  ; :monitor 0
-  ; :focusable false
-  ; :anchor "bottom right"
-  ; :geometry (geometry
-  ;             :x "2%"
-  ;             :y "2%"
-  ;             :width "10%"
-  ;             :height "1%")
   (box
-    :class "bar_class"
+    :class "ddl"
     :orientation "h"
     :space-evenly "false"
+    (launcher)
     (label :class "ddl_days" :text ddl_days)
     ; (label :text " DAYS ")
     (label :class "ddl_weeks" :text ddl_weeks)
