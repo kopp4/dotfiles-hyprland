@@ -19,9 +19,9 @@
   :exclusive false
   :stackings "fg"
   :geometry (geometry
-              :width "15%"
+              :width "20%"
               :height "5%"
-              :anchor "top center")
+              :anchor "top right")
   :windowtype "dock"
   (todowidget))
 
@@ -31,40 +31,23 @@
       :onhoverlost "${EWW_CMD} update todos_reveal=false"
     (box
       :class "bar_class"
+      :space-evenly false
       (revealer
         :transition "slidedown"
         :reveal todos_reveal
-        :duration "350ms"
+        :duration "450ms"
         (label
           :text "${ todos }"))
+
+
+      ; todo : checkbox
+
+
+
       ; (label
       ;        :text "${todos}"
       ;        :limit-width 20
 )))
-
-; (defwidget todowidget []
-  ; :monitor 0
-  ; :stacking "bg"
-  ; :anchor "bottom right"
-  ; :geometry (geometry
-  ;             :width "20%"
-  ;             :height "10%"
-  ;             :x "79%"
-  ;             :y "0%")
-  ; :focusable false
-  ; :exclusive false
-  ; combo-box-text ? 
-  ; A combo box allowing the user to choose between several items.
-  ; (box
-  ;   :class "bar_class"
-  ;   :orientation "h"
-    ; :active true
-    ; (revealer
-    ;   :transition "slidedown"
-    ; (label
-    ;   :text "${ todos }"
-    ;   :limit-width 30
-    ;   )))
 
 ; expander revealer 
 ; checkbox scale(slider) scroll(single child that can scroll)

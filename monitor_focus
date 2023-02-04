@@ -1,0 +1,1 @@
+hyprctl monitors -j | jq '.[] | select(.focused==true).id'
