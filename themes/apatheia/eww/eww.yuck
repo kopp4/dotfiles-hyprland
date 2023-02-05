@@ -301,13 +301,13 @@
     
   
 ; nope my todos sidedown disgustingly together with my whole bar eww :(
-; (defwidget root_bar_layout []
-;   (centerbox
-;     :class "root_bar_class"
-;     :orientation "h"
-;     (ddl)
-;     (bar_layout)
-;     (todowidget)))
+(defwidget root_bar_layout []
+  (centerbox
+    :class "root_bar_class"
+    :orientation "h"
+    (ddl)
+    (bar_layout)
+    (todowidget)))
 
 
 
@@ -321,7 +321,7 @@
              :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (bar_layout))
+  (root_bar_layout))
 (defwindow bar1
   :monitor 1
   :exclusive false

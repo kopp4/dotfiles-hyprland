@@ -21,7 +21,7 @@
 
 (defwidget ddl []
   (box
-    :class "ddl"
+    :class "bar_class"
     :orientation "h"
     :space-evenly "false"
     (launcher)
