@@ -139,7 +139,7 @@
           :tooltip "${volume_percent}%"
           :max 100
           :min 0
-         :onchange "pamixer -D pulse sset Master {}%"))
+         :onchange "amixer -D pulse sset Master {}%"))
       (button
         :onclick "scripts/pop audio_ctl"
         :class "volume_icon"
