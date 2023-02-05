@@ -89,7 +89,7 @@ tooltip label {
 }
 
 .volume_icon {
-    font-size: 18;
+    font-size: 28;
     color: $teal;
     margin: 0px 10px 0px 5px;
 }
@@ -104,14 +104,14 @@ tooltip label {
 }
 
 .module-wif {
-    font-size: 18;
+    font-size: 28;
     color: $purple;
     margin: 0px 15px 0px 5px;
 }
 
 .icon-launcher {
     color: $white;
-    font-size: 36px;
+    font-size: 18px;
     margin: 0px 10px 0px 15px;
 }
 
@@ -137,7 +137,7 @@ tooltip label {
 
 .bright_icon {
     // font-family: JetBrainsMono Nerd Font;
-    font-size: 18;
+    font-size: 28;
     color: $yellow;
     margin: 0px 15px 0px 0px;
 }
@@ -169,7 +169,7 @@ tooltip label {
 .works {
     font-size: 28px;
     font-weight: normal;
-    // margin: 10px 0px 0px 10px;
+    margin: 0px 0px 0px 10px;
     background-color: rgba(00, 00, 00, 0.0);
 }
 
@@ -374,7 +374,7 @@ calendar:indeterminate {
 }
 
 .launcher-icon {
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .audio-box {

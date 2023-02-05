@@ -6,12 +6,11 @@
 # 🔨 TO-DO
 - [x] TODO a desktop widget integrate todoist CLI template
 >   reference : https://github.com/joshpetit/dotfiles
-- [x] Networkmanager-dmenu
 - [ ] Fix colorpick win+c keybinds
 - [ ] Clipboard select and enter directly paste
 - [ ] Swww script : see swww_init_according_to_time_of_day.sh
 > https://github.com/Horus645/swww/blob/main/example_scripts/swww_init_according_to_time_of_day.sh
-- [ ] Youtube scrapper to random list of video wallpaper on start : NO
+- [ ] Scrap anything
 - [ ] Kitty can't kitten tmux alternative
 - [ ] Dict transfer to anki script
 - [ ] A better dictionary source
@@ -20,6 +19,7 @@
 
 
 
+# 🔨 TO-DO with higher priority
 - [ ] Abstract ddl widget so that it could be easily reused
 - [ ] Onhover ddl widget reveal children ? 
 - [ ] Onhover ddl widget animation may be a glitch or flame I don't care it's future me doin it :p same goes to todos btw
@@ -33,6 +33,7 @@
 - [ ] workspace from this dude
 > reference https://github.com/saimoomedits/eww-widgets
 - [ ] mpd & ncmpcpp configure
+- [ ] move topbar window name to another place or put album photo together.
 
 
 

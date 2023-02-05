@@ -61,7 +61,7 @@
 (defwidget workspaces []
   (literal
     :content workspace
-   :valign "center"))
+    :valign "center"))
 
 (defwidget appnames []
   (eventbox
@@ -150,6 +150,7 @@
     :onhover "${EWW_CMD} update wifi_rev=true"
     :onhoverlost "${EWW_CMD} update wifi_rev=false"
     (box
+      :spacing "3"
       :vexpand "false"
       :hexpand "false"
       :space-evenly "false"

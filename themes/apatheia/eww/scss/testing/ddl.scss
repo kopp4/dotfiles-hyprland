@@ -1,31 +1,31 @@
 .ddl {
     background-color: $background-bar;
     border-radius: 12px;
-    margin: 10px 15px 15px 15px;
+    margin: 10px 15px 1px 15px;
     padding: 4px;
     box-shadow: 0 6px 5px 2px $shadow;
 }
 .ddl_days {
     color: $red;
-    font-size: 20;
+    font-size: 18;
     font-weight: bold;
 }
 
 .ddl_weeks {
     color: $green;
-    font-size: 20;
+    font-size: 18;
     font-weight: bold;
 }
 
 .ddl_left {
     color: $yellow;
-    font-size: 20;
+    font-size: 18;
 }
 
 .ddl_event {
     text-decoration: underline;
     color: $purple2;
-    font-size: 20;
+    font-size: 18;
     font-weight: bold;
     font-style: italic;
 }

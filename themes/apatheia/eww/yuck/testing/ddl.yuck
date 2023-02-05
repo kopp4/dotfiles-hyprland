@@ -5,6 +5,19 @@
 ; (defpoll ddl_weeks :interval "2h" "ddl_days / 7") nope :(
 (defpoll ddl_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==3'")
 ; todo maybe I would create a revealer for ddl so that it could be multiple
+(defwindow ddl
+  :monitor 0
+  ; :orientation "h"
+  :exclusive false
+  ; :focusable true
+  :stackings "fg"
+  :geometry (geometry
+              :width "10%"
+              :height "2%"
+              :anchor "top left")
+  :windowtype "dock"
+  (ddl))
+ 
 
 (defwidget ddl []
   (box
