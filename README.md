@@ -34,7 +34,7 @@
 > reference https://github.com/saimoomedits/eww-widgets
 - [ ] mpd & ncmpcpp configure
 - [ ] move topbar window name to another place or put album photo together.
-
+- [ ] press topbar button to play music? or ctrl shift p to play music directly also audio 10 %
 
 
 
