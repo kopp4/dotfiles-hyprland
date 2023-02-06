@@ -45,7 +45,7 @@
       ; (label
       ;        :text "x"
       ;        :limit-width 20
-; )
+; )
       )))
 
 ; expander revealer 

@@ -116,7 +116,7 @@
       :halign "center"
       :valign "center"
       :tooltip "edit Config"
-     :onclick "kitty nvim ~/.config/hypr/themes/apatheia/eww/eww.yuck &" "﨣")))
+     :onclick "kitty nvim ~/.config/hypr/themes/apatheia/eww/eww.yuck &" "󱋄")))
 
 (defpoll uptime :interval "1m" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ minutes/m/'")
 (defpoll packages :interval "5m" `pacman -Q | wc -l`)
