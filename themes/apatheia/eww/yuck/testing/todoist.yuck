@@ -1,4 +1,3 @@
-;; This scipt is configured for wayland
 (defpoll todos 
   :interval "10s"
   `todoist-cli sync;todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7-`)
@@ -6,11 +5,6 @@
   :interval "5s"
   :initial `date +'{"hour":"%H","min":"%M"}'`
   `date +'{"hour":"%H","min":"%M"}'`)
-
-(defpoll net :interval "100s"
-  :initial `N/A`
-  `nmcli -t -f SIGNAL,ACTIVE device wifi \
-    | awk -F':' '{if($2=="yes")print$1}'`)
 
 (defvar todos_reveal false)
 
@@ -23,65 +17,43 @@
               :width "15%"
               :height "5%"
               :anchor "top right")
-  :windowtype "dock"
   (todowidget))
 
 (defwidget todowidget []
+  (box
+    :class "bar_class"
+    :space-evenly false
   (eventbox
       :onhover "${EWW_CMD} update todos_reveal=true"
       :onhoverlost "${EWW_CMD} update todos_reveal=false"
     (box
-      :class "bar_class"
+      :class "revealer"
       :space-evenly false
+      :orientation "v"
+    (box
+      :orientation "h"
+    (image
+      :class "todo-image"
+      :path "assets/weird.gif")
+    (label
+      :text "You still have 5 todos!")
+    )
       (revealer
+        :class "revealer"
         :transition "slidedown"
         :reveal todos_reveal
         :duration "450ms"
         (label
-          :text "${ todos }"))
-
+          :text "${ todos }"))))))
 
       ; todo : checkbox
       ; (label
       ;        :text "x"
       ;        :limit-width 20
 ; )
-      )))
 
 ; expander revealer 
 ; checkbox scale(slider) scroll(single child that can scroll)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(defwindow testing
-  :monitor 0
-  :stacking "fg"
-  :anchor "center"
-  ; :geometry (geometry
-  ;             :x "20%"
-  ;             :y "40%"
-  ;             :width "20%")
-  (box
-    :valign "start"
-    (label :text {EWW_NET.wlan0.NET_DOWN / 1024 / 1024} :limit-width 4)
-    (label :text {EWW_NET.wlan0.NET_UP / 1024 / 1024} :limit-width 4)
-    (Testing_sundial)
-     (_buttons :shutdown "poweroff" :reboot "reboot"
-                :logout "loginctl kill-session self"
-                :shutdown_icon "" :reboot_icon "" :logout_icon ""))
-)
-
 
 (defwidget Testing_sundial []
   (label :class "sundial-lbl" :halign "end" :hexpand true
@@ -103,17 +75,3 @@
                time.hour >= 18 && time.hour <= 19 ? "Dusk" :
                time.hour > 19 && time.hour <= 21 ? "Late Evening" :
                time.hour > 21 ? "Night" : "Midnight"}))
-
-(defwidget _buttons [shutdown shutdown_icon reboot
-                    reboot_icon logout logout_icon]
-  (box :class "btns-box" :spacing 5
-       :vexpand true :hexpand true
-       :valign "end" :halign "end"
-       :space-evenly false
-    (button :onclick shutdown shutdown_icon)
-    (button :onclick reboot reboot_icon)
-    (button :onclick logout logout_icon)))
-; (defwidget wallpaper [x y wallpaper_dir]
-;   (button :onclick ))
-
-; ls | grep .gif | shuf -n 1

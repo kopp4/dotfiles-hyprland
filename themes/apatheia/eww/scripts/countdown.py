@@ -37,7 +37,7 @@ def format_output(ddl, event):
     # print(str(ddl) + " Days ")          # daysleft 
     print(str(ddl))
     # print(str(int(ddl / 7)) + " Weeks ") # weeks left
-    print(event)        # THE event that is coming towards us
+    print(str(event))        # THE event that is coming towards us
 
 
 
