@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# input="$(wofi --show dmenu)"
+# # dict $input | wofi --show dmenu --width 1000 --heigh 500
+# trans :zh-CN -no-ansi -d $input | wofi --show dmenu --width 1000 --heigh 500
+# echo $input >> ~/.config/hypr/scripts/extra/word.collect
+
 STORAGE="$HOME/.config/hypr/scripts/extra/storage";
 
 input="$(cat $STORAGE/dict_searches.txt | wofi --show dmenu)";

@@ -163,7 +163,6 @@
           :text ESSID_WLAN))
         
       (button
-        :class "module-wif"
         :onclick "~/.config/hypr/scripts/exec_wofi wifi"
        (_network :strength WLAN_ICON :offline "󰤮" :excellent "󰤨" :good "󰤥" :okay "󰤢" :slow "󰤟"
 )))))
