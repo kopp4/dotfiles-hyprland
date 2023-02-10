@@ -11,5 +11,5 @@ themes/detox
 *.gif
 /themes/apatheia/wallpapers
 scripts/variables/temp/*
-scripts/extra/word_collect
 scripts/extra/word.collect
+hypr.conf
