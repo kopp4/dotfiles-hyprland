@@ -36,7 +36,7 @@
       :class "todo-image"
       :path "assets/weird.gif")
     (label
-      :text "You still have 5 todos!")
+      :text "You still have 5 todos!󰁊")
     )
       (revealer
         :class "revealer"
