@@ -2,8 +2,6 @@
 
 [![wakatime](https://wakatime.com/badge/user/ca8ee90f-41ed-4653-9432-b49b81b95472/project/6770a61d-075b-4c44-97b1-fa3ccd3ffca9.svg)](https://wakatime.com/badge/user/ca8ee90f-41ed-4653-9432-b49b81b95472/project/6770a61d-075b-4c44-97b1-fa3ccd3ffca9)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/AmadeusWM/dotfiles-hyprland?style=for-the-badge&color=E08BCA) ![GitHub last commit](https://img.shields.io/github/last-commit/AmadeusWM/dotfiles-hyprland?style=for-the-badge&color=E08BCA) ![GitHub repo size](https://img.shields.io/github/repo-size/AmadeusWM/dotfiles-hyprland?style=for-the-badge&color=E08BCA)
-
 
 # 🔨 TO-DO
 - [x] TODO a desktop widget integrate todoist CLI template
