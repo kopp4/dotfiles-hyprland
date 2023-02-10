@@ -1,25 +1,26 @@
 #!/bin/sh
 
-input="$(wofi --show dmenu)"
-# dict $input | wofi --show dmenu --width 1000 --heigh 500
-trans :zh-CN -no-ansi -d $input | wofi --show dmenu --width 1000 --heigh 500
-echo $input >> ~/.config/hypr/scripts/extra/word.collect
-# STORAGE="$HOME/.config/hypr/scripts/extra/storage";
+# input="$(wofi --show dmenu)"
+# # dict $input | wofi --show dmenu --width 1000 --heigh 500
+# trans :zh-CN -no-ansi -d $input | wofi --show dmenu --width 1000 --heigh 500
+# echo $input >> ~/.config/hypr/scripts/extra/word.collect
 
-# input="$(cat $STORAGE/dict_searches.txt | wofi --show dmenu)";
+STORAGE="$HOME/.config/hypr/scripts/extra/storage";
 
-# # == translate and show ==
-# if [ ! -z "$input" ]; then
-#     dict $input | wofi --show dmenu --width 1000 --heigh 500;
-# fi
+input="$(cat $STORAGE/dict_searches.txt | wofi --show dmenu)";
 
-# # == create file if not present ==
-# if ! test -f "$STORAGE/dict_searches.txt"; then
-#     touch "$STORAGE/dict_searches.txt";
-# fi
+# == translate and show ==
+if [ ! -z "$input" ]; then
+    dict $input | wofi --show dmenu --width 1000 --heigh 500;
+fi
 
-# # == store input ==
-# output="$(dict $input)"; # not shown in dmenu properly if done with variable
-# if [ ! -z "$output" ]; then
-#     echo "$input" | cat - "$STORAGE/dict_searches.txt" > temp && mv temp "$STORAGE/dict_searches.txt";
-# fi
+# == create file if not present ==
+if ! test -f "$STORAGE/dict_searches.txt"; then
+    touch "$STORAGE/dict_searches.txt";
+fi
+
+# == store input ==
+output="$(dict $input)"; # not shown in dmenu properly if done with variable
+if [ ! -z "$output" ]; then
+    echo "$input" | cat - "$STORAGE/dict_searches.txt" > temp && mv temp "$STORAGE/dict_searches.txt";
+fi
