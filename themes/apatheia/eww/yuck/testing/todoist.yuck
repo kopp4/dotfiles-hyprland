@@ -35,12 +35,18 @@
        :orientation "v"
       (box
         :orientation "h"
-       (image
-         :class "todo-image"
-         :path "assets/weird.gif")
+        :space-evenly true
        (label
-         :text "You still have 5 todos!󰁊"))
-    
+         :class "todos-reminder"
+         ; :text "You still have 5 todos!󰁊"
+         :text "You still have 5 todos!")
+       (button
+         :timeout "3s"
+         :class "refresh-todos"
+         :onclick "todoist-cli sync && notify-send 'Success' 'please manually refresh eww'"
+         (label
+           :class "refresh-icon"
+           :text "")))
       (revealer
         :class "revealer"
         :transition "slidedown"

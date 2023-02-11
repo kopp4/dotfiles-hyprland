@@ -4,3 +4,16 @@
 // .bar_class {
 //     background: blue;
 // }
+.refresh-todos {
+    font-size: 30;
+}
+.refresh-todos:hover {
+    color: $purple;
+    opacity: 1;
+}
+.todos-reminder {
+    font-size: 15;
+    font-weight: bold;
+    padding: 4px;
+
+}

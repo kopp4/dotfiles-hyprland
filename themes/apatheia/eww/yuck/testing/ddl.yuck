@@ -20,7 +20,7 @@
               :anchor "top left")
   (ddl))
  
-
+; Here lies the ddl doin nothing but cross his hands and being static while beautiful
 ; (defwidget ddl []
 ;   (box
 ;     :class "bar_class"
@@ -31,6 +31,7 @@
 ;     (label :class "ddl_weeks" :text { (ddl_days_jlpt - ddl_days_jlpt % 7 ) / 7 + " weeks "})
 ;     (label :class "ddl_left" :text " left for ")
 ;     (label :class "ddl_event" :text ddl_event_jlpt)))
+
 
 (defwidget ddl []
   (box
@@ -52,11 +53,6 @@
          :duration "450ms"
         (ddl-children))))))
 
-
-
-         
-
-
 (defwidget ddl-header []
          (box
           :space-evenly false
@@ -66,8 +62,8 @@
           (label :class "ddl_weeks" :text { (ddl_days_jlpt - ddl_days_jlpt % 7 ) / 7 + " weeks "})
           (label :class "ddl_left" :text " left for ")
           (label :class "ddl_event" :text "JLPT N1")))
- 
 
+; todo "children" is not child
 (defwidget ddl-children []
          (box
            :class "ddl2"
