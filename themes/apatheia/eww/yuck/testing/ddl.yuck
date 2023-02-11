@@ -8,17 +8,17 @@
 
 (defvar ddls_reveal false)
 
-(defwindow ddl
-  :monitor 0
-  :orientation "v"
-  :exclusive false
-  ; :focusable true
-  :stackings "fg"
-  :geometry (geometry
-              :width "10%"
-              :height "2%"
-              :anchor "top left")
-  (ddl))
+; (defwindow ddl
+;   :monitor 0
+;   :orientation "v"
+;   :exclusive false
+;   ; :focusable true
+;   :stackings "fg"
+;   :geometry (geometry
+;               :width "10%"
+;               :height "2%"
+;               :anchor "top left")
+;   (ddl))
  
 ; Here lies the ddl doin nothing but cross his hands and being static while beautiful
 ; (defwidget ddl []
@@ -36,6 +36,7 @@
 (defwidget ddl []
   (box
     :class "bar_class"
+    :halign "center"
     :orientation "h"
     :space-evenly false
    (eventbox

@@ -7,7 +7,7 @@
 - [x] TODO a desktop widget integrate todoist CLI template
 >   reference : https://github.com/joshpetit/dotfiles
 - [x] Fix colorpick win+c keybinds idk why it's fixed
-- [ ] Clipboard select and enter directly paste
+- [ ] Clipboard select and enter directly paste I don't think this is possible tho?!
 - [ ] Swww script : see swww_init_according_to_time_of_day.sh
 > https://github.com/Horus645/swww/blob/main/example_scripts/swww_init_according_to_time_of_day.sh
 - [ ] Scrap anything
@@ -24,7 +24,7 @@
 - [x] Todoist widget pending location bar or desktop
 - [x] Onhover todoist widget reveal children ?
 - [x] Network widget strength
-- [ ] Onhover ddl widget reveal children ? 
+- [x] Onhover ddl widget reveal children ? 
 - [ ] Onhover ddl widget animation may be a glitch or flame I don't care it's future me doin it :p same goes to todos btw
 - [ ] weather script integrate
 - [ ] eww primary screen shi, window opened onclick went to monitor 1 wtf

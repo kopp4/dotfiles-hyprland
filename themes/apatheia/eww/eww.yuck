@@ -314,7 +314,7 @@
   :monitor 0
   :exclusive false
   :geometry (geometry
-             :width "58%"
+             :width "60%"
              :height "5%"
              :anchor "top center")
   :stacking "fg"
