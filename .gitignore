@@ -12,3 +12,4 @@ themes/detox
 scripts/variables/temp/*
 scripts/extra/word.collect
 hypr.conf
+configs/monitor.conf
