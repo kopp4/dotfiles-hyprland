@@ -1,6 +1,9 @@
 ;; change defpoll to change ddl event
-(defpoll ddl_days :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==1'")
-(defpoll ddl_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==2'")
+; (defpoll ddl_days_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==1'")
+(defpoll ddl_days_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 | awk 'NR==1'")
+; (defpoll ddl_event_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==2'")
+
+(defpoll ddl_days_school :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 18/2/2023 | awk 'NR==1'")
 ; todo maybe I would create a revealer for ddl so that it could be multiple
 
 (defvar ddls_reveal false)
@@ -18,62 +21,64 @@
   (ddl))
  
 
+; (defwidget ddl []
+;   (box
+;     :class "bar_class"
+;     :orientation "h"
+;     :space-evenly "false"
+;     (launcher)
+;     (label :class "ddl_days" :text {ddl_days_jlpt + " days "})
+;     (label :class "ddl_weeks" :text { (ddl_days_jlpt - ddl_days_jlpt % 7 ) / 7 + " weeks "})
+;     (label :class "ddl_left" :text " left for ")
+;     (label :class "ddl_event" :text ddl_event_jlpt)))
+
 (defwidget ddl []
   (box
     :class "bar_class"
     :orientation "h"
-    :space-evenly "false"
-    (launcher)
-    (label :class "ddl_days" :text {ddl_days + " days "})
-    (label :class "ddl_weeks" :text { (ddl_days - ddl_days % 7 ) / 7 + " weeks "})
-    (label :class "ddl_left" :text " left for ")
-    (label :class "ddl_event" :text ddl_event)))
-
-; (defwidget ddl []
-;   (box
-;     :class "bar_class"
-;     :space-evenly false
-;    (eventbox
-;        :onhover "${EWW_CMD} update ddls_reveal=true"
-;        :onhoverlost "${EWW_CMD} update ddls_reveal=false"
-;      (box
-;         :class "revealer"
-;         :space-evenly false
-;         :orientation "v"
-;        (box
-;          :orientation "h"
-;          (launcher)
-;          (label :class "ddl_days" :text {ddl_days + " days "})
-;          (label :class "ddl_weeks" :text { (ddl_days - ddl_days % 7 ) / 7 + " weeks "})
-;          (label :class "ddl_left" :text " left for ")
-;          (label :class "ddl_event" :text ddl_event))
-           
-
-;        (revealer
-;          :class "revealer"
-;          :transition "slidedown"
-;          :reveal ddls_reveal
-;          :duration "450ms"
-;          (box
-;            :class "ddl2"
-;            :space-evenly false
-;           (image
-;             :class "launcher-icon"
-;             :path "assets/3d.gif"
-;             :image-width 28)
-;           (label :class "ddl_days" :text {ddl_days + " days "})
-;           (label :class "ddl_weeks" :text { (ddl_days - ddl_days % 7 ) / 7 + " weeks "})
-;           (label :class "ddl_left" :text " left for ")
-;           (label :class "ddl_event" :text ddl_event)))))))
+    :space-evenly false
+   (eventbox
+       :onhover "${EWW_CMD} update ddls_reveal=true todos_reveal=true"
+       :onhoverlost "${EWW_CMD} update ddls_reveal=false todos_reveal=false"
+     (box
+        :class "revealer"
+        :space-evenly false
+        :orientation "v"
+       (ddl-header)
+       (revealer
+         :class "revealer"
+         :transition "slidedown"
+         :reveal ddls_reveal
+         :duration "450ms"
+        (ddl-children))))))
 
 
-           
+
+         
+
+
+(defwidget ddl-header []
+         (box
+          :space-evenly false
+          :orientation "h"
+          (launcher)
+          (label :class "ddl_days" :text {ddl_days_jlpt + " days "})
+          (label :class "ddl_weeks" :text { (ddl_days_jlpt - ddl_days_jlpt % 7 ) / 7 + " weeks "})
+          (label :class "ddl_left" :text " left for ")
+          (label :class "ddl_event" :text "JLPT N1")))
+ 
+
+(defwidget ddl-children []
+         (box
+           :class "ddl2"
+           :space-evenly false
+           :halign "end"
+          ; (image
+          ;   :class "launcher-icon"
+          ;   :path "assets/3d.gif"
+          ;   :image-width 28)
+          (label :class "ddl_days" :text {ddl_days_school+ " days "})
+          ; (label :class "ddl_weeks" :text { (ddl_days_jlpt - ddl_days_jlpt % 7 ) / 7 + " weeks "})
+          (label :class "ddl_left" :text " left for ")
+          (label :class "ddl_event" :text "SCHOOL")))
   
-
-
-       ; todo : checkbox
-       ; (label
-       ;        :text "x"
-       ;        :limit-width 20
-; )
-      

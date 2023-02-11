@@ -1,6 +1,9 @@
+; (defpoll todos 
+;   :interval "10s"
+;   `todoist-cli sync;todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7-`)
 (defpoll todos 
   :interval "10s"
-  `todoist-cli sync;todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7-`)
+  `todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7-`)
 (defpoll time 
   :interval "5s"
   :initial `date +'{"hour":"%H","min":"%M"}'`
@@ -23,21 +26,21 @@
   (box
     :class "bar_class"
     :space-evenly false
-  (eventbox
-      :onhover "${EWW_CMD} update todos_reveal=true"
-      :onhoverlost "${EWW_CMD} update todos_reveal=false"
-    (box
-      :class "revealer"
-      :space-evenly false
-      :orientation "v"
-    (box
-      :orientation "h"
-    (image
-      :class "todo-image"
-      :path "assets/weird.gif")
-    (label
-      :text "You still have 5 todos!󰁊")
-    )
+   (eventbox
+       :onhover "${EWW_CMD} update todos_reveal=true ddls_reveal=true"
+       :onhoverlost "${EWW_CMD} update todos_reveal=false ddls_reveal=false"
+     (box
+       :class "revealer"
+       :space-evenly false
+       :orientation "v"
+      (box
+        :orientation "h"
+       (image
+         :class "todo-image"
+         :path "assets/weird.gif")
+       (label
+         :text "You still have 5 todos!󰁊"))
+    
       (revealer
         :class "revealer"
         :transition "slidedown"
@@ -46,10 +49,10 @@
         (label
           :text "${ todos }"))))))
 
-      ; todo : checkbox
-      ; (label
-      ;        :text "x"
-      ;        :limit-width 20
+       ; todo : checkbox
+       ; (label
+       ;        :text "x"
+       ;        :limit-width 20
 ; )
 
 ; expander revealer 
@@ -58,20 +61,20 @@
 (defwidget Testing_sundial []
   (label :class "sundial-lbl" :halign "end" :hexpand true
          :text {time.hour >= 2 && time.hour <= 4 ? "Early Morning" :
-               time.hour <= 5 ? "Dawn" :
-               time.hour >= 6 &&
+                time.hour <= 5 ? "Dawn" :
+                time.hour >= 6 &&
                 (time.hour <= 8 &&
                   time.min <= 59) ? "Morning" :
-               time.hour >= 9 &&
+                time.hour >= 9 &&
                 (time.hour <= 11 && time.min <= 59)
                 ? "Late Morning" :
-               time.hour == 12 && time.min <= 29 ? "Midday" :
-               time.hour >= 12 && time.hour <= 16 ? "Afternoon" :
-               time.hour > 16 && time.hour <= 17 ?
+                time.hour == 12 && time.min <= 29 ? "Midday" :
+                time.hour >= 12 && time.hour <= 16 ? "Afternoon" :
+                time.hour > 16 && time.hour <= 17 ?
                 "Late Afternoon" :
-               (time.hour >= 17 && time.min <= 1)
+                (time.hour >= 17 && time.min <= 1)
                 || (time.hour <= 18 && time.min <= 20) ?
-                  "Early Evening" :
-               time.hour >= 18 && time.hour <= 19 ? "Dusk" :
-               time.hour > 19 && time.hour <= 21 ? "Late Evening" :
-               time.hour > 21 ? "Night" : "Midnight"}))
+                "Early Evening" :
+                time.hour >= 18 && time.hour <= 19 ? "Dusk" :
+                time.hour > 19 && time.hour <= 21 ? "Late Evening" :
+                time.hour > 21 ? "Night" : "Midnight"}))

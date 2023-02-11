@@ -6,13 +6,13 @@
 # 🔨 TO-DO
 - [x] TODO a desktop widget integrate todoist CLI template
 >   reference : https://github.com/joshpetit/dotfiles
-- [ ] Fix colorpick win+c keybinds
+- [x] Fix colorpick win+c keybinds idk why it's fixed
 - [ ] Clipboard select and enter directly paste
 - [ ] Swww script : see swww_init_according_to_time_of_day.sh
 > https://github.com/Horus645/swww/blob/main/example_scripts/swww_init_according_to_time_of_day.sh
 - [ ] Scrap anything
-- [ ] Kitty can't kitten tmux alternative
 - [ ] Dict transfer to anki script
+- [ ] Dict pronunce on launch
 - [ ] A better dictionary source
 - [ ] A better bar maybe 
 >   reference : https://github.com/flick0/dotfiles/tree/aurora
@@ -20,12 +20,12 @@
 
 
 # 🔨 TO-DO with higher priority
-- [ ] Abstract ddl widget so that it could be easily reused
+- [x] Abstract ddl widget so that it could be easily reused
+- [x] Todoist widget pending location bar or desktop
+- [x] Onhover todoist widget reveal children ?
+- [x] Network widget strength
 - [ ] Onhover ddl widget reveal children ? 
 - [ ] Onhover ddl widget animation may be a glitch or flame I don't care it's future me doin it :p same goes to todos btw
-- [ ] Todoist widget pending location bar or desktop
-- [ ] Onhover todoist widget reveal children ?
-- [ ] Network widget strength
 - [ ] weather script integrate
 - [ ] eww primary screen shi, window opened onclick went to monitor 1 wtf
 - [ ] spotify eww or anything frontend top right corner floating
@@ -36,6 +36,7 @@
 - [ ] move topbar window name to another place or put album photo together.
 /etc/xdg/eww/eww-bar
 - [ ] press topbar button to play music? or ctrl shift p to play music directly also audio 10 %
+- [ ] Configure dict.py so it could translate jp and give sentences(it's my habit)
 
 
 
