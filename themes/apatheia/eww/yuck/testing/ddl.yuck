@@ -1,6 +1,6 @@
 ;; change defpoll to change ddl event
 ; (defpoll ddl_days_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==1'")
-(defpoll ddl_days_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 | awk 'NR==1'")
+(defpoll ddl_days_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 2/7/2023 | awk 'NR==1'")
 ; (defpoll ddl_event_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==2'")
 
 (defpoll ddl_days_school :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 18/2/2023 | awk 'NR==1'")
