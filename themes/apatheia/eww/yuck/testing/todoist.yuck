@@ -2,10 +2,10 @@
 ;   :interval "10s"
 ;   `todoist-cli sync;todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7-`)
 (defpoll todos 
-  :interval "10h"
+  :interval "100s"
   `todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7-`)
 (defpoll todos-number
-  :interval "10h"
+  :interval "100s"
   `todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7- | wc -l`)
 (defpoll time 
   :interval "5s"
@@ -37,12 +37,16 @@
        :class "revealer"
        :space-evenly false
        :orientation "v"
-       (box
-         :class "todos-header"
-         :spacing false
 
+
+       (box
+         :class "todoist-header-text-button"
+         :orientation "h"
+         :spacing 30
+         :space-evenly false
 
         (box
+          :class "todoist-header-text"
           :orientation "h"
           :space-evenly false
          (label
@@ -53,25 +57,19 @@
            :text {todos-number + " "})
          (label
            :class "todos-reminder"
-           :text "todos left !!"))
+           :text "todos left !!")
+
+         (Testing_sundial))
+
+
         (button
           :timeout "3s"
           :class "refresh-todos"
-          :onclick "todoist-cli sync && notify-send 'Success' 'please manually refresh eww'"
+          ; todos else 
+          :onclick "todoist-cli sync && notify-send 'Success' 'Please manually refresh eww'"
           (label
             :class "refresh-icon"
             :text "")))
-
-
-
-
-
-
-
-
-        
-
-
       (revealer
         :halign "start"
         :class "revealer"
