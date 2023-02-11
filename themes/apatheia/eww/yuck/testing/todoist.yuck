@@ -42,24 +42,25 @@
        (box
          :class "todoist-header-text-button"
          :orientation "h"
-         :spacing 30
+         :spacing 60
          :space-evenly false
 
         (box
           :class "todoist-header-text"
           :orientation "h"
           :space-evenly false
-         (label
-           :class "todos-reminder"
-           :text "You still have ")
+         ; (label
+         ;   :class "todos-reminder"
+         ;   :text "You still have ")
+         (Testing_sundial)
+         (sep)
          (label
            :class "todos-number"
            :text {todos-number + " "})
          (label
            :class "todos-reminder"
-           :text "todos left !!")
+           :text "todos left !!"))
 
-         (Testing_sundial))
 
 
         (button
