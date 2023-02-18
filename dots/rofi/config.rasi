@@ -40,8 +40,8 @@ element {
 
 element selected {
   background-color: #2e343f;
-}@theme "/home/amadeusw/.local/share/rofi/themes/rounded-pink-dark.rasi"
-//@theme "/home/amadeusw/.local/share/rofi/themes/spotlight-dark.rasi"
-//@theme "/home/amadeusw/.local/share/rofi/themes/rounded-pink-dark-apatheia.rasi"
-//@theme "/home/amadeusw/.local/share/rofi/themes/spotlight-dark.rasi"
-@theme "/home/amadeusw/.local/share/rofi/themes/rounded-pink-dark-apatheia.rasi"
+}@theme "~/.local/share/rofi/themes/rounded-pink-dark.rasi"
+//@theme "~/.local/share/rofi/themes/spotlight-dark.rasi"
+//@theme "~/.local/share/rofi/themes/rounded-pink-dark-apatheia.rasi"
+//@theme "~/.local/share/rofi/themes/spotlight-dark.rasi"
+@theme "~/.local/share/rofi/themes/rounded-pink-dark-apatheia.rasi"
