@@ -37,7 +37,10 @@
 /etc/xdg/eww/eww-bar
 - [ ] press topbar button to play music? or ctrl shift p to play music directly also audio 10 %
 - [ ] Configure dict.py so it could translate jp and give sentences(it's my habit) may be trans shell
-
+- [ ] Configure nnn all the plugin shi
+- [ ] Configure jerry & rofi font
+- [ ] Configure aliyundrive find out why its dead
+- [ ] todo lsit rclone sync files to cloud 
 
 
 

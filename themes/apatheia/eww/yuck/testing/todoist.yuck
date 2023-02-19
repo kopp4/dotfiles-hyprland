@@ -78,7 +78,8 @@
         :reveal todos_reveal
         :duration "450ms"
         (label
-          :text "${ todos }"))))))
+          :text "${ todos }"
+          :wrap true))))))
 
        ; todo : checkbox
        ; (label

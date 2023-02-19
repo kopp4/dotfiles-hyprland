@@ -633,3 +633,4 @@
   (cal))
 
 
+; nmcli -t -f GENERAL.STATE connection show "Wired connection 1" | grep "activated"
