@@ -8,14 +8,17 @@
     font-size: 30;
 }
 .refresh-todos:hover {
-    color: $purple;
-    opacity: 1;
+    // color: $purple;
+    // opacity: 1;
+    border-radius: 10px;
+    padding: 2px;
+    background: linear-gradient(145deg, $green);
+    box-shadow:  20px 20px 60px #bebebe;
 }
 .todos-reminder {
     font-size: 15;
     font-weight: bold;
     padding: 4px;
-
 }
 .todos-number {
     font-size: 18;
@@ -24,6 +27,14 @@
     font-style: italic;
     text-decoration: underline;
 }
+.todos-content {
+  border-radius: 0.2em;
+  padding: 0.4em;
+}
+// WIP TODO content color add html tag ?
+.todos-content:nth-child(1) {background: $yellow}
+.todos-content:nth-child(0) {background: $green}
+
 .sundial-lbl {
   font-size: 1.4em;
   font-weight: bold;

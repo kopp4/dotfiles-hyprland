@@ -78,6 +78,7 @@
         :reveal todos_reveal
         :duration "450ms"
         (label
+          :class "todos-content"
           :text "${ todos }"
           :wrap true))))))
 
@@ -87,7 +88,7 @@
        ;        :limit-width 20
 ; )
 
-; expander revealer 
+; expander
 ; checkbox scale(slider) scroll(single child that can scroll)
 
 (defwidget Testing_sundial []
