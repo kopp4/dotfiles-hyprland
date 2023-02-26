@@ -3,7 +3,7 @@
 (defpoll ddl_days_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 2/7/2023 | awk 'NR==1'")
 ; (defpoll ddl_event_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==2'")
 
-(defpoll ddl_days_school :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 18/2/2023 | awk 'NR==1'")
+(defpoll ddl_days_school :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 12/2/2023 | awk 'NR==1'")
 ; todo maybe I would create a revealer for ddl so that it could be multiple
 
 (defvar ddls_reveal false)
@@ -69,13 +69,11 @@
          (box
            :class "ddl2"
            :space-evenly false
+           :spacing 8
            :halign "end"
-          ; (image
-          ;   :class "launcher-icon"
-          ;   :path "assets/3d.gif"
-          ;   :image-width 28)
-          (label :class "ddl_days" :text {ddl_days_school+ " days "})
-          ; (label :class "ddl_weeks" :text { (ddl_days_jlpt - ddl_days_jlpt % 7 ) / 7 + " weeks "})
-          (label :class "ddl_left" :text " left for ")
-          (label :class "ddl_event" :text "SCHOOL")))
+          (label :class "ddl_left" :text "校历  ")
+          (label :class "ddl_days" :text "第")
+          (label :class "ddl_weeks" :text {-1 * ddl_days_school / 7} :limit-width 4)
+          (label :class "ddl_days" :text " 周")
+          ))
   
