@@ -30,10 +30,13 @@
 .todos-content {
   border-radius: 0.2em;
   padding: 0.4em;
+  // text-decoration: underline $white;
+  text-shadow: 4px 4px 5px $red;
+  font-style: oblique;
 }
 // WIP TODO content color add html tag ?
-.todos-content:nth-child(1) {background: $yellow}
-.todos-content:nth-child(0) {background: $green}
+// .todos-content:nth-child(1) {background: $yellow}
+// .todos-content:nth-child(0) {background: $green}
 
 .sundial-lbl {
   font-size: 1.4em;
