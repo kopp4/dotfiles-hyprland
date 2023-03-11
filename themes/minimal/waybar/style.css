@@ -34,6 +34,7 @@ window#waybar.solo {
   transition: 0.1s all ease;
   border-radius: 10px;
   color: #eae9f0;
+  background-color: unset;
   border: 2px solid #eae9f0;
   box-shadow: #eae9f0 0px 5px 0px 0px;
   margin-top: 0px;
@@ -68,6 +69,7 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
   transition: 0.1s all ease;
   border-radius: 10px;
   color: #eae9f0;
+  background-color: unset;
   opacity: 0.7;
 }
 
@@ -85,6 +87,7 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
   transition: 0.1s all ease;
   border-radius: 10px;
   color: #eae9f0;
+  background-color: unset;
   border: 2px solid #eae9f0;
   box-shadow: #eae9f0 0px 5px 0px 0px;
   margin-top: 0px;
@@ -129,7 +132,7 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
 #mode,
 #battery,
 #cpu,
-#memory,
+#bluetooth #memory,
 #network,
 #pulseaudio,
 #idle_inhibitor,
@@ -138,6 +141,7 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
 #custom-terminal,
 #custom-spotify,
 #custom-weather,
+#custom-dunst,
 #custom-mail {
   margin: 5px 6px 0px 10px;
   padding-bottom: 3px;
@@ -150,6 +154,12 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
 
 #network {
   padding-right: 5px;
+}
+
+#bluetooth {
+  padding-right: 2px;
+  padding-left: 8px;
+  margin-top: 2px;
 }
 
 #battery.warning {
@@ -188,6 +198,7 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
   transition: 0.1s all ease;
   border-radius: 10px;
   color: #eae9f0;
+  background-color: unset;
   border: 2px solid #eae9f0;
   box-shadow: #eae9f0 0px 5px 0px 0px;
   margin-top: 0px;
@@ -206,6 +217,7 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
   transition: 0.1s all ease;
   border-radius: 10px;
   color: #eae9f0;
+  background-color: unset;
   border: 2px solid #eae9f0;
   box-shadow: #eae9f0 0px 5px 0px 0px;
   margin-top: 0px;
@@ -216,8 +228,9 @@ more can be read here: https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
 }
 
 #tray {
+  font-size: 5px;
   padding: 0px 10px;
-  padding-right: 15px;
+  padding-right: 1px;
   border-radius: 5px 0px 0px 5px;
   background-color: rgba(17, 17, 27, 0);
 }
