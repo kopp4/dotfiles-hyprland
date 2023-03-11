@@ -25,20 +25,20 @@
 - [x] Onhover todoist widget reveal children ?
 - [x] Network widget strength
 - [x] Onhover ddl widget reveal children ? 
-- [ ] Onhover ddl widget animation may be a glitch or flame I don't care it's future me doin it :p same goes to todos btw
+- [x] Onhover ddl widget animation may be a glitch or flame I don't care it's future me doin it :p same goes to todos btw
 - [ ] weather script integrate
 - [ ] eww primary screen shi, window opened onclick went to monitor 1 wtf
 - [ ] spotify eww or anything frontend top right corner floating
 > reference https://github.com/niraj998/niraj998 or syndrizzle dude
 - [ ] workspace from this dude
 > reference https://github.com/saimoomedits/eww-widgets
-- [ ] mpd & ncmpcpp configure
+- [x] mpd & ncmpcpp configure
 - [ ] move topbar window name to another place or put album photo together.
 /etc/xdg/eww/eww-bar
 - [ ] press topbar button to play music? or ctrl shift p to play music directly also audio 10 %
 - [ ] Configure dict.py so it could translate jp and give sentences(it's my habit) may be trans shell
-- [ ] Configure nnn all the plugin shi
-- [ ] Configure jerry & rofi font
+- [x] Configure nnn all the plugin shi
+- [x] Configure jerry & rofi font
 - [ ] Configure aliyundrive find out why its dead
 - [ ] todo lsit rclone sync files to cloud 
 
