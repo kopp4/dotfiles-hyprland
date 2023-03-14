@@ -2,5 +2,7 @@
 
 grim -g "$(slurp)" - | wl-copy
 notify-send "Screenshot copied to clipboard" -a "ss"
+# I shall put this in dunst but not now todo
+canberra-gtk-play -i camera-shutter -d 'camera shutter'
 # grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
 # grim -g "0,0 2048x1280" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
