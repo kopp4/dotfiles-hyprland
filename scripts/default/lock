@@ -5,7 +5,7 @@ swayidle -w \
     resume 'hyprctl dispatch dpms on' &
 
 swaylock \
-         # --screenshots \
+         --screenshots \
          --clock \
          --indicator-idle-visible \
          --indicator-radius 100 \
@@ -23,7 +23,7 @@ swaylock \
          --inside-ver-color 00000088 \
          --inside-wrong-color 00000088 \
          --separator-color 00000000 \
-         --fade-in 0.15 \
+         # --fade-in 0.15 \
          --effect-blur 10x2 \
          -c 0B0A10ff
 
