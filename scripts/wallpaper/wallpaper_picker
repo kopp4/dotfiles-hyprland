@@ -9,5 +9,6 @@ $hypr/scripts/variables/set_env background "$wallpaper_folder/$wallpaper_locatio
 
 $hypr/themes/apatheia/scripts/wallpaper
 
-# echo "~/.config/hypr/themes/apatheia/wallpapers$wallpaper"
+dunstify "~/.config/hypr/themes/apatheia/wallpapers$wallpaper"
+
 # swaybg -m fill -i "$HOME/.config/hypr/themes/apatheia/wallpapers/$wallpaper" &

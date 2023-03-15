@@ -307,6 +307,8 @@
     frame_color = 	"#0B0A10" # "#89b4fa"
     timeout = 3
     highlight = "#AAC5A0"
+    # todo change volume sound is played too
+    # add a not sound situation or idk fk
     script = ~/.config/dunst/scripts/sound-normal.sh
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
