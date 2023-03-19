@@ -51,6 +51,7 @@
     :orientation "h"
     (button
       ; :onclick "~/.config/hypr/scripts/exec_wofi application_launcher"
+      :timeout "10s"
       :onclick "scripts/wallpaper_shuffle"
       (image
         :class "launcher-icon"
