@@ -64,7 +64,7 @@
 
 
         (button
-          :timeout "3s"
+          :timeout "5s"
           :class "refresh-todos"
           ; todos else 
           :onclick "todoist-cli sync && notify-send 'Success' 'Please manually refresh eww'"
