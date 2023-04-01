@@ -1,25 +1,24 @@
 #!/usr/bin/bash
 
 # grim -g "$(slurp)" - | wl-copy
-function selection(){
-    grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
+function selection() {
+    # grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
+    grim -g "$(slurp)" - | wl-copy && dunstify "Screenshot copied to clipboard"
 }
 
-
-function full_screen(){
+function full_screen() {
     grim -g "$(slurp -o)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
 }
 
-function full_screen(){
+function full_screen() {
     grim - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
 }
 
-function delay(){
+function delay() {
     geo="$(slurp)"
     sleep 3
     grim -g "$geo" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
 }
-
 
 doc() {
     echo "Usage:
@@ -32,10 +31,10 @@ doc() {
         delay           Takes a screenshot of the selected area after 3 second"
 }
 
-case $1 in 
-    selection) selection                ;;
-    full_screen) full_screen            ;;
-    all_screens) all_screens            ;;
-    delay) delay                        ;;
-    *) doc                              ;;
+case $1 in
+selection) selection ;;
+full_screen) full_screen ;;
+all_screens) all_screens ;;
+delay) delay ;;
+*) doc ;;
 esac

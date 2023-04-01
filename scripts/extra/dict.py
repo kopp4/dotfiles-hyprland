@@ -14,7 +14,8 @@ def runDictionary():
 def getWofiWithPreviousSearches():
     prevSearches = listPrevSearches()
     wofiCmd = "wofi --show dmenu"
-    return subprocess.getoutput(parseEchoCommand(prevSearches) + " | " + wofiCmd)
+    return subprocess.getoutput(
+        parseEchoCommand(prevSearches) + " | " + wofiCmd)
 
 
 def listPrevSearches():
@@ -24,8 +25,9 @@ def listPrevSearches():
 
 def showMeaning(inp):
     # cmdDict = "dict " + inp;
-    cmdDict = "trans :zh-CN -no-ansi -d " + inp
-    cmdWofi = cmdDict + " | wofi --show dmenu --width 1000 --heigh 500"
+    # cmdDict = "trans :zh-CN -no-ansi -d " + inp
+    cmdDict = "goldendict " + inp
+    cmdWofi = cmdDict
     subprocess.getoutput(cmdWofi)
 
 
@@ -34,13 +36,8 @@ def saveLocally(inp):
         cmd = "touch {path}/dict_searches.txt".format(pathStoredSearches)
         subprocess.getoutput(cmd)
     if inp != "":
-        cmd = (
-            parseEchoCommand(inp)
-            + " | cat - "
-            + pathStoredSearches
-            + " > temp && mv temp "
-            + pathStoredSearches
-        )
+        cmd = (parseEchoCommand(inp) + " | cat - " + pathStoredSearches +
+               " > temp && mv temp " + pathStoredSearches)
         subprocess.getoutput(cmd)
 
 
