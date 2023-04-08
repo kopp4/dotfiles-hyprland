@@ -317,8 +317,8 @@
   :exclusive false
   :geometry (geometry
              :width "60%"
-             :height "5%"
-             :anchor "top center")
+             :height "1%"
+             :anchor "center bottom")
   :stacking "fg"
   :windowtype "dock"
   (root_bar_layout))
