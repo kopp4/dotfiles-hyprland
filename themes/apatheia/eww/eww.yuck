@@ -51,6 +51,7 @@
     :orientation "h"
     (button
       ; :onclick "~/.config/hypr/scripts/exec_wofi application_launcher"
+      :timeout "10s"
       :onclick "scripts/wallpaper_shuffle"
       (image
         :class "launcher-icon"
@@ -165,6 +166,7 @@
       (button
         :onclick "~/.config/hypr/scripts/exec_wofi wifi"
        (_network :strength WLAN_ICON :offline "󰤮" :excellent "󰤨" :good "󰤥" :okay "󰤢" :slow "󰤟"
+       ;(_network :strength WLAN_ICON :offline "睊" :excellent "" :good "" :okay "" :slow ""
 )))))
 
 (defwidget _network [strength offline excellent good okay slow]
@@ -315,8 +317,8 @@
   :exclusive false
   :geometry (geometry
              :width "60%"
-             :height "5%"
-             :anchor "top center")
+             :height "1%"
+             :anchor "center bottom")
   :stacking "fg"
   :windowtype "dock"
   (root_bar_layout))
