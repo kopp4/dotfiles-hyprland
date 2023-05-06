@@ -17,6 +17,7 @@
 (defpoll calendar_day :interval "2h" "date '+%d'")
 (defpoll calendar_year :interval "2h" "date '+%Y'")
 (defpoll volume_percent :interval "1s"  "scripts/sbvol --get")
+(defpoll todo_sh :interval "2h" "exec todo.sh list")
 
 
 
@@ -308,6 +309,22 @@
     (bar_layout)
     (todowidget)
     ))
+
+; my clip and would be temporarily put here
+(defwindow clip
+  :monitor 0
+  :class "clip"
+  :orientation "h"
+  :exclusive false
+  :geometry (geometry
+              :width "10%"
+              :height "5%"
+              :anchor "center")
+  :stacking "bg"
+(label 
+  :text {todo_sh}))
+
+
 
 
 

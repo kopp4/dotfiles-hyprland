@@ -74,6 +74,6 @@
           (label :class "ddl_left" :text "校历  ")
           (label :class "ddl_days" :text "第")
           (label :class "ddl_weeks" :text {-1 * ddl_days_school / 7} :limit-width 4)
-          (label :class "ddl_days" :text " 周")
-          ))
+          (label :class "ddl_days" :text " 周")))
+          
   

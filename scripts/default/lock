@@ -1,13 +1,13 @@
 #!/usr/bin/bash
 
-swayidle -w \
-    timeout 5 "hyprctl dispatch dpms off" \
+exec swayidle -w \
+    timeout 1 "hyprctl dispatch dpms off" \
     resume 'hyprctl dispatch dpms on' &
 
-         # --screenshots \
-         # --fade-in 0.15 \
-         # --clock \
-         # --effect-blur 10x2 \
+# --screenshots \
+# --fade-in 0.15 \
+# --clock \
+# --effect-blur 10x2 \
 # swaylock \
 #          --indicator-idle-visible \
 #          --indicator-radius 100 \
@@ -26,7 +26,6 @@ swayidle -w \
 #          --inside-wrong-color 00000088 \
 #          --separator-color 00000000 \
 #          -c 0B0A10ff
-
 
 swaylock
 

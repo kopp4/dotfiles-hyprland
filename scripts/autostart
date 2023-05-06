@@ -11,7 +11,7 @@ dunst &
 $scripts/default/battery_notif &
 
 # screen locking when idle
-$scripts/default/idle_handler &
+# $scripts/default/idle_handler &
 
 # effects
 # $scripts/rgb &
