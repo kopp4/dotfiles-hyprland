@@ -9,7 +9,7 @@ themes/winter
 themes/pokemon
 themes/windows
 themes/detox
-*.gif
+# *.gif
 /themes/apatheia/wallpapers
 scripts/variables/temp/*
 hypr.conf
