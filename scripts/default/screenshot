@@ -2,8 +2,8 @@
 
 # grim -g "$(slurp)" - | wl-copy
 function selection() {
-    # grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
-    grim -g "$(slurp)" - | wl-copy && dunstify "Screenshot copied to clipboard"
+    grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
+    # grim -g "$(slurp)" - | wl-copy && dunstify "Screenshot copied to clipboard"
 }
 
 function full_screen() {
