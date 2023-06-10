@@ -48,7 +48,9 @@ bind=SUPER,B,exec,~/.config/hypr/themes/apatheia/scripts/wallpaper_picker
 
 
 # exec=killall -3 eww & sleep 1 && ~/.config/hypr/themes/apatheia/eww/launch_bar
-exec=killall -3 eww ; swww kill
+exec=killall -3 eww 
+# exec=killall -3 eww ; swww kill
+
 # apatheia Japanese: アパテイア
 
 

@@ -311,18 +311,18 @@
     ))
 
 ; my clip and would be temporarily put here
-(defwindow clip
-  :monitor 0
-  :class "clip"
-  :orientation "h"
-  :exclusive false
-  :geometry (geometry
-              :width "10%"
-              :height "5%"
-              :anchor "center")
-  :stacking "bg"
-(label 
-  :text {todo_sh}))
+; (defwindow clip
+;   :monitor 0
+;   :class "clip"
+;   :orientation "h"
+;   :exclusive false
+;   :geometry (geometry
+;               :width "10%"
+;               :height "5%"
+;               :anchor "center")
+;   :stacking "bg"
+; (label 
+;   :text {todo_sh}))
 
 
 
