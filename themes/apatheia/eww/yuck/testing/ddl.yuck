@@ -51,8 +51,8 @@
          :class "revealer"
          :transition "slidedown"
          :reveal ddls_reveal
-         :duration "450ms"
-        (ddl-children))))))
+         :duration "450ms")))))
+        ; (ddl-children))))))
 
 (defwidget ddl-header []
          (box
@@ -65,15 +65,15 @@
           (label :class "ddl_event" :text "JLPT N1")))
 
 ; todo "children" is not child
-(defwidget ddl-children []
-         (box
-           :class "ddl2"
-           :space-evenly false
-           :spacing 8
-           :halign "end"
-          (label :class "ddl_left" :text "校历  ")
-          (label :class "ddl_days" :text "第")
-          (label :class "ddl_weeks" :text {-1 * ddl_days_school / 7} :limit-width 4)
-          (label :class "ddl_days" :text " 周")))
+; (defwidget ddl-children []
+;          (box
+;            :class "ddl2"
+;            :space-evenly false
+;            :spacing 8
+;            :halign "end"
+;           (label :class "ddl_left" :text "校历  ")
+;           (label :class "ddl_days" :text "第")
+;           (label :class "ddl_weeks" :text {-1 * ddl_days_school / 7} :limit-width 4)
+;           (label :class "ddl_days" :text " 周")))
           
   
