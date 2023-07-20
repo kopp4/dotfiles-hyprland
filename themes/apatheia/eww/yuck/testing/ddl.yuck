@@ -1,7 +1,7 @@
 ;; change defpoll to change ddl event
 ; (defpoll ddl_days_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==1'")
 ; (defpoll ddl_days_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 20/8/2023 | awk 'NR==1'")
-(defpoll ddl_days_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 13/7/2023 | awk 'NR==1'")
+(defpoll ddl_days_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 23/7/2023 | awk 'NR==1'")
 ; (defpoll ddl_event_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==2'")
 
 (defpoll ddl_days_school :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 5/2/2023 | awk 'NR==1'")
@@ -63,7 +63,7 @@
           (label :class "ddl_days" :text {ddl_days_event + " days "})
           (label :class "ddl_weeks" :text { (ddl_days_event - ddl_days_event % 7 ) / 7 + " weeks "})
           (label :class "ddl_left" :text " left for ")
-          (label :class "ddl_event" :text "TOEIC 900 DDL")))
+          (label :class "ddl_event" :text "TOEIC 900")))
 
 ; todo "children" is not child
 ; (defwidget ddl-children []

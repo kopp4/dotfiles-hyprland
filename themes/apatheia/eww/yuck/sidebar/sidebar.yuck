@@ -6,7 +6,7 @@
              :x "0px"
              :width "1px"
     ; :height "100%"
-             :anchor "top left")
+             :anchor "top right")
   :stacking "fg"
   :monitor 0
   (sidebar))
