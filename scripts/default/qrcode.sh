@@ -4,8 +4,6 @@
 
 # dunstify -I ~/Pictures/qrcode.png $1
 
+# qrencode -o ~/Pictures/qrcode.png "$(wl-paste)"
 
-qrencode -o ~/Pictures/qrcode.png "$(wl-paste)"
-
-dunstify -I ~/Pictures/qrcode.png "$(wl-paste)"
-
+qrencode -o - "$(wl-paste)" | swappy -f -
