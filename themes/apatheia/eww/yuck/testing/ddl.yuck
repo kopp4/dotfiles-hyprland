@@ -1,10 +1,11 @@
 ;; change defpoll to change ddl event
 ; (defpoll ddl_days_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==1'")
 ; (defpoll ddl_days_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 20/8/2023 | awk 'NR==1'")
-(defpoll ddl_days_event :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 23/7/2023 | awk 'NR==1'")
+(defpoll ddl_days_event :interval "1h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 20/8/2023 | awk 'NR==1'")
+(defpoll days_left :interval "1h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/days_left.py")
 ; (defpoll ddl_event_jlpt :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 7/7/2023 JLPT N1 | awk 'NR==2'")
 
-(defpoll ddl_days_school :interval "2h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 5/2/2023 | awk 'NR==1'")
+; (defpoll ddl_days_school :interval "1h" "exec ~/.config/hypr/themes/apatheia/eww/scripts/countdown.py 5/2/2023 | awk 'NR==1'")
 ; todo maybe I would create a revealer for ddl so that it could be multiple
 
 (defvar ddls_reveal false)
@@ -52,8 +53,8 @@
          :class "revealer"
          :transition "slidedown"
          :reveal ddls_reveal
-         :duration "450ms")))))
-        ; (ddl-children))))))
+         :duration "450ms"
+        (ddl-children))))))
 
 (defwidget ddl-header []
          (box
@@ -63,18 +64,43 @@
           (label :class "ddl_days" :text {ddl_days_event + " days "})
           (label :class "ddl_weeks" :text { (ddl_days_event - ddl_days_event % 7 ) / 7 + " weeks "})
           (label :class "ddl_left" :text " left for ")
-          (label :class "ddl_event" :text "TOEIC 900")))
+          (label :class "ddl_event" :text "TOEIC")))
 
 ; todo "children" is not child
-; (defwidget ddl-children []
-;          (box
-;            :class "ddl2"
-;            :space-evenly false
-;            :spacing 8
-;            :halign "end"
-;           (label :class "ddl_left" :text "校历  ")
-;           (label :class "ddl_days" :text "第")
-;           (label :class "ddl_weeks" :text {-1 * ddl_days_school / 7} :limit-width 4)
-;           (label :class "ddl_days" :text " 周")))
+(defwidget ddl-children []
+         (box
+           :class "ddl2"
+           :space-evenly false
+           :spacing 8
+           :halign "end"
+          ; (label :class "ddl_left" :text "校历  ")
+          (label :class "ddl_days" :text {days_left}
+           (circular-progress
+             :value {EWW_BATTERY["BAT0".capacity]}
+             :class "batbar"
+             :thickness 4
+             (button
+               :onclick "scripts/pop system"
+               :class "iconbat"
+               :tooltip "battery on ${EWW_BATTERY["BAT0"].capacity}%"
+               "")))))
+
+          
+
+         ; (circular-progress
+         ;       :value {EWW_BATTERY["BAT0"].capacity}
+         ;       :class "batbar"
+         ;       :thickness 4
+         ;       (button
+         ;         :onclick "scripts/pop system"
+         ;         :class "iconbat"
+         ;         :tooltip "battery on ${EWW_BATTERY["BAT0"].capacity}%"
+         ;        "")))
+
+
+          
+          ; (label :class "ddl_days" :text "第")
+          ; (label :class "ddl_weeks" :text {-1 * ddl_days_school / 7} :limit-width 4)
+          ; (label :class "ddl_days" :text " 周")))
           
   
