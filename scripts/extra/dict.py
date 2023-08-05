@@ -1,48 +1,58 @@
-import subprocess, os
+#!/usr/bin/env python3
 
-pathStoredSearches = "~/.config/hypr/scripts/extra/storage/dict_searches.txt"
+import os 
+import subprocess
+import datetime
+import csv
 
+file_path = "~/.config/hypr/scripts/extra/storage/dict_searches.csv"
+# file_path = "~/dict_searches.csv"
+file_path = os.path.expanduser(file_path)
 
-def runDictionary():
-    inp = getWofiWithPreviousSearches()
-    print(inp)
-    if inp != "":
-        showMeaning(inp)
-    saveLocally(inp)
-
-
-def getWofiWithPreviousSearches():
-    prevSearches = listPrevSearches()
-    wofiCmd = "wofi --show dmenu"
-    return subprocess.getoutput(
-        parseEchoCommand(prevSearches) + " | " + wofiCmd)
+def createFileIfNot(file_path):
+    if not os.path.exists(file_path):
+        with open(file_path, "w"):
+            pass
 
 
-def listPrevSearches():
-    cmd = "cat ~/.config/hypr/scripts/extra/storage/dict_searches.txt"
-    return subprocess.getoutput(cmd)
+def showWord(text):
+    '''
+    return word being searched
+    '''
+    command = f'''echo "{text}" | wofi --show dmenu'''
+    return subprocess.getoutput(command)
 
+def getWord():
+    createFileIfNot(file_path)
+    word_string = ""
+    with open(file_path, 'r') as file:
+        csv_reader = csv.reader(file)
+        csv_reader = list(csv_reader)
+        csv_reader.reverse()
+        for row in csv_reader:
+            word_string += '|'.join(row) + '\n'
+    word_string = word_string.rstrip("\n")
+    return word_string
 
-def showMeaning(inp):
-    # cmdDict = "dict " + inp;
-    # cmdDict = "trans :zh-CN -no-ansi -d " + inp
-    cmdDict = "goldendict " + inp
+def saveWordToFile(word):
+    createFileIfNot(file_path)
+    # Regard string with spaces empty
+    if word.strip():
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(file_path, "a", newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow([timestamp, word])
+
+def showGoldenDict(word):
+    cmdDict = f'''goldendict "{word}"'''
     cmdWofi = cmdDict
     subprocess.getoutput(cmdWofi)
+    
+if __name__ == "__main__":
+    word = showWord(getWord())
+    if word.strip():
+        showGoldenDict(word)
+        saveWordToFile(word)
 
 
-def saveLocally(inp):
-    if os.path.isfile(pathStoredSearches):
-        cmd = "touch {path}/dict_searches.txt".format(pathStoredSearches)
-        subprocess.getoutput(cmd)
-    if inp != "":
-        cmd = (parseEchoCommand(inp) + " | cat - " + pathStoredSearches +
-               " > temp && mv temp " + pathStoredSearches)
-        subprocess.getoutput(cmd)
 
-
-def parseEchoCommand(inp):
-    return 'echo "' + inp + '"'
-
-
-runDictionary()

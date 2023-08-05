@@ -26,3 +26,4 @@ keybinds/key-maps.conf
 
 configs/monitor.conf
 
+scripts/extra/storage/dict_searches.csv
