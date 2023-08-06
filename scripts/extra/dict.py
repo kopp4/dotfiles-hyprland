@@ -51,8 +51,13 @@ def showGoldenDict(word):
 if __name__ == "__main__":
     word = showWord(getWord())
     if word.strip():
+        if "|" in word:
+            word = word.split("|")[1].strip()
         showGoldenDict(word)
         saveWordToFile(word)
+
+
+
 
 
 
