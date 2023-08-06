@@ -34,14 +34,20 @@ def getWord():
     word_string = word_string.rstrip("\n")
     return word_string
 
-def saveWordToFile(word):
+def saveNewWordToFile(word):
     createFileIfNot(file_path)
     # Regard string with spaces empty
     if word.strip():
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open(file_path, "a", newline='', encoding='utf-8') as file:
-            writer = csv.writer(file)
-            writer.writerow([timestamp, word])
+        with open(file_path, 'r') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                if word in row[1]:
+                    return
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(file_path, "a", newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow([timestamp, word])
+
 
 def showGoldenDict(word):
     cmdDict = f'''goldendict "{word}"'''
@@ -54,7 +60,7 @@ if __name__ == "__main__":
         if "|" in word:
             word = word.split("|")[1].strip()
         showGoldenDict(word)
-        saveWordToFile(word)
+        saveNewWordToFile(word)
 
 
 
