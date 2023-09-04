@@ -64,7 +64,7 @@
           (label :class "ddl_days" :text {ddl_days_event + " days "})
           (label :class "ddl_weeks" :text { (ddl_days_event - ddl_days_event % 7 ) / 7 + " weeks "})
           (label :class "ddl_left" :text " left for ")
-          (label :class "ddl_event" :text "Deep Learning Course")))
+          (label :class "ddl_event" :text "Thesis Defense")))
 
 ; todo "children" is not child
 (defwidget ddl-children []
