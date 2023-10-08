@@ -20,8 +20,8 @@ source $HOME/.config/hypr/scripts/variables/load_envs;
 ${EWW} open "sidebar$PRIMARY_MONITOR_ID"
 
 ## Open standard widgets and bar
-NB_MONITORS=($(hyprctl monitors -j | jq -r '.[] | .id'))
-for id in "${NB_MONITORS[@]}"; do
+# NB_MONITORS=($(hyprctl monitors -j | jq -r '.[] | .id'))
+# for id in "${NB_MONITORS[@]}"; do
     # make top bar for every display
     bar="bar$id"
     hyprctl dispatch focusmonitor "$id"
