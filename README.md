@@ -1,3 +1,8 @@
+# ‼️‼️‼️ Disclaimer ‼️‼️‼️
+I moved to NixOS as of 2023/07/01, so this config will not be maintained anymore.
+
+<div align="center">
+
 # 🌸**Apatheia Dot Files**🌸
 
 [![wakatime](https://wakatime.com/badge/user/ca8ee90f-41ed-4653-9432-b49b81b95472/project/6770a61d-075b-4c44-97b1-fa3ccd3ffca9.svg)](https://wakatime.com/badge/user/ca8ee90f-41ed-4653-9432-b49b81b95472/project/6770a61d-075b-4c44-97b1-fa3ccd3ffca9)
