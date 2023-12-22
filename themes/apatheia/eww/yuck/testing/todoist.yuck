@@ -4,11 +4,12 @@
 (defpoll todos 
   :interval "100s"
 ;`todoist-cli --indent list --filter 'today|overdue' -p |cut -d' ' -f6-`)
-  `todoist-cli --csv --indent list --filter 'today' -p | cut -d',' -f5-`)
+  `todoist-cli --csv --indent list --filter '(today|overdue) & p1' -p | cut -d',' -f5-`)
+; todoist-cli --csv --indent list --filter '(today|overdue) & p1' -p | cut -d',' -f5-
 
 (defpoll todos-number
   :interval "100s"
-  `todoist-cli --indent list --filter 'today|overdue'|cut -d' ' -f7- | wc -l`)
+  `todoist-cli --indent list --filter '(today|overdue) & p1'|cut -d' ' -f7- | wc -l`)
 (defpoll time 
   :interval "5s"
   :initial `date +'{"hour":"%H","min":"%M"}'`
