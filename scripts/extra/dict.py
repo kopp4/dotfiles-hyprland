@@ -50,7 +50,7 @@ def saveNewWordToFile(word):
 
 
 def showGoldenDict(word):
-    cmdDict = f'''goldendict "{word}"'''
+    cmdDict = f'''goldendict -s "{word}"'''
     cmdWofi = cmdDict
     subprocess.getoutput(cmdWofi)
     
