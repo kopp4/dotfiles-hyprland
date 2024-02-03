@@ -19,7 +19,8 @@ def showWord(text):
     '''
     return word being searched
     '''
-    command = f'''echo "{text}" | wofi --show dmenu'''
+    # command = f'''echo "{text}" | wofi --show dmenu'''
+    command = "wl-paste"
     return subprocess.getoutput(command)
 
 def getWord():
@@ -61,9 +62,3 @@ if __name__ == "__main__":
             word = word.split("|")[1].strip()
         showGoldenDict(word)
         saveNewWordToFile(word)
-
-
-
-
-
-
