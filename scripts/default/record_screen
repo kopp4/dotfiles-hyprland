@@ -28,6 +28,7 @@ Coords=$(slurp) || exit
 # timeout and exit after 10 minutes as user has almost certainly forgotten it's running
 # timeout 600 wf-recorder -t -g "$Coords" -f "$TmpRecordPath" || exit
 timeout 600 wf-recorder --audio="alsa_output.pci-0000_05_00.6.3.analog-stereo.monitor" -t -g "$Coords" -f "$TmpRecordPath" || exit
+notify-send "Recording..."
 
 # Get the filename from the user and honor cancel
 SavePath=$(
