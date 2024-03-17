@@ -32,7 +32,7 @@ function exportBackground(){
     background_image=$(head -1 $temp_folder/background)
 
     # -z is empty
-    [ -z $background_image ] && background_image="~/.config/hypr/themes/apatheia/wallpapers/Planet.png"
+    [ -z $background_image ] && background_image="~/.config/hypr/themes/apatheia/wallpapers/miku.jpg"
 
     export BACKGROUND_IMAGE=$background_image
 }

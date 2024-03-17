@@ -2,15 +2,18 @@
 
 # grim -g "$(slurp)" - | wl-copy
 function selection() {
+    canberra-gtk-play -i camera-shutter -d 'camera shutter'
     grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
     # grim -g "$(slurp)" - | wl-copy && dunstify "Screenshot copied to clipboard"
 }
 
 function full_screen() {
+    canberra-gtk-play -i camera-shutter -d 'camera shutter'
     grim -g "$(slurp -o)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
 }
 
 function full_screen() {
+    canberra-gtk-play -i camera-shutter -d 'camera shutter'
     grim - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
 }
 
