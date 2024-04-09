@@ -4,7 +4,8 @@
 source $HOME/.config/hypr/scripts/variables/load_envs
 
 function load_wp(){
-    swww img -t grow --transition-bezier 0.0,0.0,1.0,1.0 --transition-pos 0.2,0.91 --transition-duration 3.0 --transition-step 255 --transition-fps 75 $BACKGROUND_IMAGE
+    swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration 2.8 --transition-step 255 --transition-fps 75 $BACKGROUND_IMAGE --outputs 'HDMI-A-1'
+    # swww img -t grow --transition-bezier 0.0,0.0,1.0,1.0 --transition-pos 0.2,0.91 --transition-duration 3.0 --transition-step 255 --transition-fps 75 $BACKGROUND_IMAGE
 }
 
 #perform cleanup and exit
