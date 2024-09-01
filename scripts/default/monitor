@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# a script to enable monitor
+# transform a horizontal monitor to vertical, or vice versa
+
+path=~/.config/hypr/configs
+
+
+if grep -q "^#.*monitor=eDP-2,disable.*" "$path/monitor.conf"; then
+    echo "internal monitor is enabled"
+    if grep -q "^monitor=eDP-2,1920x1080@60,.*transform,1" "$path/monitor.conf"; then
+        echo "internal monitor is transformed"
+        echo "Enter 'y' to restore monitor: "
+        read input
+        if [ "$input" == 'y' ]; then
+            # comment line
+            sed -i '/monitor=eDP-2,1920x1080@60,2560x0/s/^/# /' "$path/monitor.conf" && echo "Internal monitor restored" || echo "failed" && exit 1
+        else 
+            echo "exiting"
+            exit 0
+        fi
+    else
+        echo "internal monitor is horizontal"
+        echo "Enter 'y' to transform monitor: "
+        read input
+        if [ "$input" == 'y' ]; then
+            # uncomment line
+            sed -i '/monitor=eDP-2,1920x1080@60,2560x0/s/^# //' "$path/monitor.conf" && echo "Internal monitor transformed" || echo "failed" && exit 1
+        fi
+    fi
+else
+    echo "internal monitor is disabled"
+    echo "Enter 'y' to enable the internal monitor: "
+    read input
+    if [ "$input" == "y" ]; then
+        # comment line
+        sed -i '/monitor=eDP-2,disable/s/^/# /' "$path/monitor.conf" && echo "Internal monitor enabled" || echo "failed" && exit 1
+        exit 0
+    else
+        echo "exiting"
+        exit 0
+    fi
+fi
+# monitor=eDP-2,1920x1080@60,2560x0,1.333333,transform,1
+
+
+# monitor=HDMI-A-1,2560x1440@75,0x0,1
+
+
+# monitor=eDP-2,disable # prefer high resolution for all monitors
