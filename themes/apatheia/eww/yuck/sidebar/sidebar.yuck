@@ -16,7 +16,7 @@
              :x "0px"
              :width "1px"
     ; :height "100%"
-             :anchor "top left")
+             :anchor "top right")
   :stacking "fg"
   :monitor 1
   (sidebar))
@@ -26,7 +26,7 @@
              :x "0px"
              :width "1px"
     ; :height "100%"
-             :anchor "top left")
+             :anchor "top right")
   :stacking "fg"
   :monitor 2
   (sidebar))

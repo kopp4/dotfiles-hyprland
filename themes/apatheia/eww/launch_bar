@@ -28,6 +28,7 @@ ${EWW} open "sidebar0"
     hyprctl dispatch focusmonitor "$id"
     # ${EWW} open "$bar"
     #  eww & hyprctl do not recogonize monitors by the same ID
+    # ${EWW} open bar1
     ${EWW} open bar1
     # ${EWW} open clip
 done
